@@ -1,0 +1,120 @@
+.container {
+    background-color: white;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b433cc;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+}
+.body {
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+#button {
+    background-color:  rgb(163, 109, 189);
+    color: white;
+}
+.ui-content {
+    padding: 0px;
+}
+
+.tabbar ul li {
+    background-color:  rgb(163, 109, 189);
+    color: rgb(163, 109, 189);
+}
+table{
+    width: 100%;
+    margin: 10px 0;
+    border-collapse: collapse;
+}
+table, th, td{
+    border: 1px solid #cdcdcd;
+}
+table th, table td{
+    padding: 5px;
+    text-align: left;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active {
+    background-color: rgb(163, 109, 189);
+    border-color: #b433cc;
+    color: #fff;
+    text-shadow: 0 1px 0 #b433cc;
+}
+.ui-page-theme-a .ui-btn {
+    background-color: white;
+    border-color: #ddd;
+    color: #333;
+    text-shadow: 0 1px 0 #f3f3f3;
+}
+.ui-page-theme-a .ui-btn:hover {
+    background-color: rgb(163, 109, 189);
+    color: white;
+}
+#select_cleanliness {
+    background-color: white;
+    color: black;
+}
+#select_service {
+    background-color: white;
+    color: black;
+}
+#select_food {
+    background-color: white;
+    color: black;
+}
+.current {
+    cursor: pointer;
+}
+
+.modal-title {
+    text-align: center;
+    color: #b433cc;
+}
+.require {
+    color: red;
+}
+.input {
+    clear: both;
+}
+
+.customersRating {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+.customersRating td, .customersRating th {
+  border: 0px solid #ddd;
+}
+  
+.customersRating th {
+    text-align: left;
+    background-color:#cc80ff;
+    color: white;
+}
+
+.left {
+      width: 20%
+}
+
+.right {
+      width: 80%;
+      vertical-align: top
+}
+.tblNameRow {
+    font-weight: bold;
+}
+#action {
+    float: right;
+}

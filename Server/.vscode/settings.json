@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "env\\Scripts\\python.exe",
+    "python.venvPath": "‪D:\\\\_ENVS",
+    "python.venvFolders": [
+        "‪D:\\\\_ENVS"
+    ],
+    "python.terminal.activateEnvInCurrentTerminal": true
+}
