@@ -10,6 +10,9 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -70,24 +73,39 @@ public class inputScreen extends AppCompatActivity {
             reporter.setError("Please Enter Reporter");
         }
 
-        if (name.length() > 0 && typeEdit.length() > 0 && dateEdit.length() > 0 && priceEdit.length() > 0 && reporterEdit.length() > 0) {
-            URL url = null;
-            String postDataBytes = "ahahah";
+        final EditText note = (EditText) findViewById(R.id.editNote);
 
+
+        if (name.length() > 0 && typeEdit.length() > 0 && dateEdit.length() > 0 && priceEdit.length() > 0 && reporterEdit.length() > 0) {
+
+            JSONObject rating = new JSONObject();
             try {
-                url = new URL("http://10.0.2.2:5000/rate");
+                rating.put("restaurantName", name);
+                rating.put("restaurantType", typeEdit);
+                rating.put("price", priceEdit);
+                rating.put("date", dateEdit);
+                rating.put("serviceRating", "5/5/1993");
+                rating.put("foodRating", "4rd");
+                rating.put("cleanlinessRating", "scicence");
+                rating.put("reporter", reporterEdit);
+                rating.put("total", "5/5/1993");
+                rating.put("note", note.getText().toString());
+
+                URL url = new URL("http://10.0.2.2:5000/rate");
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setRequestMethod("POST");
-                httpURLConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-                httpURLConnection.setRequestProperty("Content-Length", String.valueOf(postDataBytes));
+                httpURLConnection.setRequestProperty("Content-Type", "application/json");
+                httpURLConnection.setRequestProperty("Content-Length", rating.toString());
                 httpURLConnection.setDoOutput(true);
 
-            } catch (MalformedURLException e) {
+            } catch (JSONException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }catch (MalformedURLException e) {
                 e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
         }
     }
 }

@@ -1,13 +1,13 @@
 package asm.android;
 
 public class ratingObject {
-    private String restaurantName, restaurantType, price, date_visit, serviceRating, foodRating, cleanlinessRating, total ,note;
+    private String restaurantName, restaurantType, price, date_visit, serviceRating, foodRating, cleanlinessRating, total, reporter,note;
 
 //    public ratingObject() {
 //
 //    }
 
-    public ratingObject(String restaurantName, String restaurantType, String price, String date_visit, String serviceRating, String foodRating, String cleanlinessRating, String total, String note) {
+    public ratingObject(String restaurantName, String restaurantType, String price, String date_visit, String serviceRating, String foodRating, String cleanlinessRating, String total, String reporter, String note) {
         this.restaurantName = restaurantName;
         this.restaurantType = restaurantType;
         this.price = price;
@@ -16,6 +16,7 @@ public class ratingObject {
         this.foodRating = foodRating;
         this.cleanlinessRating = cleanlinessRating;
         this.total = total;
+        this.reporter = reporter;
         this.note = note;
     }
 
@@ -43,11 +44,11 @@ public class ratingObject {
         this.price = price;
     }
 
-    public String getDate() {
+    public String getDate_visit() {
         return date_visit;
     }
 
-    public void setDate(String date_visit) {
+    public void setDate_visit(String date_visit) {
         this.date_visit = date_visit;
     }
 
@@ -81,6 +82,14 @@ public class ratingObject {
 
     public void setTotal(String total) {
         this.total = total;
+    }
+
+    public String getReporter() {
+        return reporter;
+    }
+
+    public void setReporter(String reporter) {
+        this.reporter = reporter;
     }
 
     public String getNote() {

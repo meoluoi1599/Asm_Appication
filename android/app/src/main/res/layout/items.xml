@@ -151,6 +151,23 @@
                 android:layout_height="wrap_content"
                 android:textColor="#000"
                 android:textStyle="bold"
+                android:text="Reporter:"/>
+            <TextView
+                android:id="@+id/txvReporter"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:text="Quyen"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000"
+                android:textStyle="bold"
                 android:text="Note:"/>
             <TextView
                 android:id="@+id/txvNote"

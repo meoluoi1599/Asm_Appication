@@ -43,16 +43,18 @@ public class ratingAdapter extends ArrayAdapter<ratingObject> {
             TextView food = convertView.findViewById(R.id.txvFood);
             TextView clean = convertView.findViewById(R.id.txvClean);
             TextView total = convertView.findViewById(R.id.txvTotal);
+            TextView repoter = convertView.findViewById(R.id.txvReporter);
             TextView note = convertView.findViewById(R.id.txvNote);
 
             resName.setText(rating.getRestaurantName());
             type.setText(rating.getRestaurantType());
             price.setText(rating.getPrice());
-            date.setText(rating.getDate());
+            date.setText(rating.getDate_visit());
             service.setText(rating.getServiceRating());
             food.setText(rating.getFoodRating());
             clean.setText(rating.getCleanlinessRating());
             total.setText(rating.getTotal());
+            repoter.setText(rating.getReporter());
             note.setText(rating.getNote());
         }
         return convertView;

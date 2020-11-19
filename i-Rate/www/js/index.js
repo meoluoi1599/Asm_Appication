@@ -178,7 +178,7 @@ function refreshTable() {
           var note = cursor.value.note;
           var rating = cursor.value.ratingAverage;
           var markup = "<table  id='report_"
-            + keyPath +"' class='customersRating'><tr><th class='left'>"+ name +"</th><th class='right'><div id='action' class='ui-nodisc-icon ui-alt-icon'><a href='#' class='ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline' onclick='deleteData("
+            + keyPath +"' class='customersRating' data-filter='true' data-input='#filterTable-input'><tr><th class='left'>"+ name +"</th><th class='right'><div id='action' class='ui-nodisc-icon ui-alt-icon'><a href='#' class='ui-btn ui-shadow ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-inline' onclick='deleteData("
             + keyPath +")'><a href='#' class='ui-btn ui-shadow ui-corner-all ui-icon-edit ui-btn-icon-notext ui-btn-inline' data-toggle='modal' data-target='#myModal' onclick='edit("
             + keyPath +")'></div></th></tr><tr><td class='tblNameRow'>Type</td><td>" 
             + type + "</td></tr><tr> <td class='tblNameRow'>Date/Time</td><td>" 

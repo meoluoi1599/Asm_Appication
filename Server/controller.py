@@ -9,6 +9,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'mysecret'
 app.config['JWT_SECRET_KEY'] = 'Meow meow meow'
 
+# get data from font-end then stored in database
 @app.route('/rate', methods = ['POST'])
 def rate():
     restaurantName = request.json.get('restaurantName')
@@ -21,9 +22,11 @@ def rate():
     total = request.json.get('total')
     note = request.json.get('note')
     values = (restaurantName, restaurantType, price, date, serviceRating, foodRating, cleanlinessRating, total ,note)
+    print(values)
     result = database.rate(values)
     return jsonify({'row-affect': result})
 
+# get data from database then return json
 @app.route('/get_rating')
 def get_rating():
     result = database.get_rating() 

@@ -4,7 +4,7 @@ def conn1():
     return mysql.connector.connect(
         host = 'localhost',
         user = 'root',
-        password = '1234',
+        password = 'bim1',
         database = 'db_android'
     )
 
@@ -26,6 +26,7 @@ class database:
         except:
             raise Exception
             return 'wrong'
+    # get rating
     def get_rating(seft):
         try:
             # query = 'select * from tblstory'
