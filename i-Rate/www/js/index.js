@@ -164,7 +164,8 @@ function refreshTable() {
     var objectStore = db.transaction("rating").objectStore("rating");  
     objectStore.openCursor().onsuccess = function(event) {
        var cursor = event.target.result; 
-       console.log(cursor)     
+       console.log(cursor) 
+       //get data from database    
        if (cursor) {        
           var name = cursor.value.name;
           var type = cursor.value.type;
